@@ -184,7 +184,7 @@ img {
 
 .about-paragraph {
     font-family: 'Public Sans';
-    font-size: rem;
+    font-size: 1rem;
     color: #D9D9D9;
     text-align: left;
     line-height: 3;
@@ -233,6 +233,12 @@ img {
     padding-bottom: 20px;
 }
 
+.proj-preview {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
 
 
 /* Bottom */
@@ -276,6 +282,162 @@ img {
     flex-direction: column;
     gap: 30px;
 }
+
+/* Project Page */
+.projects-container .container {
+    padding: 30px;
+}
+
+.project-title {
+    text-align: center;
+    display: block;
+    background-color: rgba(175, 213, 170, 0.7);
+    padding: 0 8px;
+    font-weight: 900;
+    font-size: 6rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.proj-grid-container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px
+}
+
+.proj-display {
+    background: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.proj-display:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.5s
+}
+
+/* Popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 40px;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.proj-display img {
+    border-radius: 10px;
+}
+
+.proj-title {
+    font-weight: bold;
+}
+
+
+
+/* Resume */
+.resume {
+    position: relative;
+    width: 90%;
+    padding-bottom: 141%;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.resume iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.download-resume-btn {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    background-color: #AFD5AA;
+    color: #231F20;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.download-btn-container {
+    text-align: center;
+    padding: 40px;
+}
+
+/* Contact */
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-left, .contact-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+    border: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button {
+    margin: 20px;
+    border: none;
+    font-family: inherit;
+    background-color: #AFD5AA;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
 
 
 /* Utility Classes */
@@ -348,6 +510,7 @@ img {
 }
 
 
+
 /* Hamburger Button */
 .hamburger-button {
     display: none;
@@ -364,6 +527,8 @@ img {
     background: #231F20;
     margin: 6px 0;
 }
+
+
 
 /* Mobile Menu */
 .mobile-menu {
@@ -395,6 +560,8 @@ img {
     font-size: 20px;
     transition: 0.3s;
 }
+
+
 
 /* Media Queries */
 @media (max-width: 900px) {
@@ -476,6 +643,18 @@ img {
     .bottom-container .container{
         flex-direction: column;
         gap: 50px;
+    }
+
+    .resume-frame {
+        height: 80vh;
+    }
+
+    .project-title {
+        font-size: 3rem;
+    }
+
+    .download-resume-btn {
+        font-size: 1rem;
     }
 }
 

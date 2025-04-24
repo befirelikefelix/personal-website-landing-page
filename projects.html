@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix Chen - Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/headshot.png" type="image/x-icon"/>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="log">
+                <a href="index.html">
+                    <img src="images/headshot.png" alt="logo" width="60">
+                </a>
+            </div>
+            
+            <div class="main-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="resume.html">Resume</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Hamburger Menu -->
+            <button class="hamburger-button">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+            <div class="mobile-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="resume.html">Resume</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects -->
+    <div class="projects-container">
+        <div class="container">
+            <p class="project-title">Projects</p>
+        </div>
+        <div class="container">
+            <div class="proj-grid-container">
+                <a class="proj-display" onclick="openDynamicPopup('videos/61b-the-game.mp4', 'CS61B: the Game', 'Developer | Python', 'This is the expaned description')">
+                    <img src="images/cs61b-the-game-preview.png" alt="cs61b-preview" class="proj-preview">
+                    <p class="proj-title">CS61B: The Game</p>
+                </a>
+                <a class="proj-display" onclick="openDynamicPopup('videos/snake.mp4', 'Snake Game', 'Developer | C', 'This is the expaned description')">
+                    <img src="images/snake-preview.png" alt="snake-preview" class="proj-preview">
+                    <p class="proj-title">Snake Game</p>
+                </a>
+                <a class="proj-display" onclick="openDynamicPopup('videos/2048.mp4', '2048 Game', 'Developer | Java', 'This is the expaned description')">
+                    <img src="images/2048-preview.png" alt="2048-preview" class="proj-preview">
+                    <p class="proj-title">2048 Game</p>
+                </a>
+                <a class="proj-display" onclick="openDynamicPopup('videos/scheme.mp4', 'Scheme Interpreter', 'Developer | Python', 'This is the expaned description')">
+                    <img src="images/scheme-preview.png" alt="ants-preview" class="proj-preview">
+                    <p class="proj-title">Scheme Code Interpreter</p>
+                </a>
+                <a class="proj-display" onclick="openDynamicPopup('videos/ants.mp4', 'Ants vs Some Bees Game', 'Developer | Python', 'This is the expaned description')">
+                    <img src="images/ants-preview.png" alt="ants-preview" class="proj-preview">
+                    <p class="proj-title">Ants vs Some Bees</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popups -->
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup')">&times;</span>
+            <video id="popup-vid" controls style="max-width: 100%; margin: 20px 0; display: none;">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2 id="popup-title"></h2>
+            <p id="popup-subtitle" style="font-style: italic;"></p>
+            <p id="popup-paragraph"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bottom-container">
+        <div class= "container">
+            <div class="footer-left-content">
+                <p class="bottom-header">
+                    Let's<br>Connect!
+                </p>
+            </div>
+            <div class="footer-right-content">
+                <a href="https://www.instagram.com/befirelikefelix/?hl=en" target="_blank" class="social-link">
+                    <img src="images/insta-logo.png" class="footer-socials"/>
+                    <p>Instagram</p>
+                </a>   
+                <a href="https://github.com/befirelikefelix" target="_blank" class="social-link">
+                    <img src="images/github-logo.png" class="footer-socials"/>
+                    <p>Github</p>
+                </a> 
+                <a href="https://www.linkedin.com/in/felix-chen-363a8027a/" target="_blank" class="social-link">
+                    <img src="images/linkedin-logo.png" class="footer-socials"/>
+                    <p>LinkedIn</p>
+                </a>
+                <a href="mailto:felixchen@berkeley.edu" target="_blank" class="social-link">
+                    <img src="images/gmail-logo.png" class="footer-socials"/>
+                    <p>felixchen@berkeley.edu</p>
+                </a>
+                <a href="tel:510-707-2060" target="_blank" class="social-link">
+                    <img src="images/phone.png" class="footer-socials"/>
+                    <p>(510)707-2060</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
